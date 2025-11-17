@@ -1,5 +1,5 @@
 ﻿-- ========================================
--- 1️⃣ TẠO CƠ SỞ DỮ LIỆU
+--  TẠO CƠ SỞ DỮ LIỆU
 -- ========================================
 CREATE DATABASE QuanLyKhoHang;
 GO
@@ -7,8 +7,20 @@ GO
 USE QuanLyKhoHang;
 GO
 
--- ========================================
--- 2️⃣ BẢNG KHO
+-- =======================================
+-- Bảng Khách hàng
+-- =======================================
+CREATE TABLE KhachHang (
+    MaKhach INT IDENTITY PRIMARY KEY,
+    TenKhach NVARCHAR(100) NOT NULL,
+    DiaChi NVARCHAR(200),
+    DienThoai NVARCHAR(20)
+);
+GO
+
+
+-- ========================================    
+--  BẢNG KHO
 -- ========================================
 CREATE TABLE Kho (
     MaKho CHAR(5) PRIMARY KEY,
@@ -18,7 +30,7 @@ CREATE TABLE Kho (
 GO
 
 -- ========================================
--- 3️⃣ BẢNG NHÀ CUNG CẤP
+--  BẢNG NHÀ CUNG CẤP
 -- ========================================
 CREATE TABLE NhaCungCap (
     MaNCC CHAR(5) PRIMARY KEY,
@@ -29,7 +41,7 @@ CREATE TABLE NhaCungCap (
 GO
 
 -- ========================================
--- 4️⃣ BẢNG MẶT HÀNG
+--  BẢNG MẶT HÀNG
 -- ========================================
 CREATE TABLE MatHang (
     MaHang CHAR(5) PRIMARY KEY,
@@ -43,7 +55,7 @@ CREATE TABLE MatHang (
 GO
 
 -- ========================================
--- 5️⃣ BẢNG PHIẾU NHẬP
+--  BẢNG PHIẾU NHẬP
 -- ========================================
 CREATE TABLE PhieuNhap (
     MaPN CHAR(5) PRIMARY KEY,
@@ -54,7 +66,7 @@ CREATE TABLE PhieuNhap (
 GO
 
 -- ========================================
--- 6️⃣ BẢNG CHI TIẾT PHIẾU NHẬP
+--  BẢNG CHI TIẾT PHIẾU NHẬP
 -- ========================================
 CREATE TABLE ChiTietPhieuNhap (
     MaPN CHAR(5),
@@ -68,7 +80,7 @@ CREATE TABLE ChiTietPhieuNhap (
 GO
 
 -- ========================================
--- 7️⃣ BẢNG PHIẾU XUẤT
+--  BẢNG PHIẾU XUẤT
 -- ========================================
 CREATE TABLE PhieuXuat (
     MaPX CHAR(5) PRIMARY KEY,
@@ -78,7 +90,7 @@ CREATE TABLE PhieuXuat (
 GO
 
 -- ========================================
--- 8️⃣ BẢNG CHI TIẾT PHIẾU XUẤT
+--  BẢNG CHI TIẾT PHIẾU XUẤT
 -- ========================================
 CREATE TABLE ChiTietPhieuXuat (
     MaPX CHAR(5),
